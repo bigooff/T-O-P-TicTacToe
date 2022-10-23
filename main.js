@@ -1,10 +1,24 @@
 import * as Board from "./Gameboard.js";
 
 
-console.log(Board.Gameboard);
+const restartBtn = document.querySelector(".restart-btn")
+const overheadBtn = document.querySelector(".name-btn")
+const nameInput = document.querySelector(".name")
+const overhead = document.querySelector(".overhead")
 
 
-function Player(){
+export let playerName;
+overheadBtn.addEventListener("click",()=>{
+    playerName = nameInput.value
+    Board.startGame();
+    overhead.remove()
+})
 
-    return {}
-}
+
+
+
+restartBtn.addEventListener("click",Board.restartGame)
+
+
+
+

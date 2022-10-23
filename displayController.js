@@ -1,10 +1,8 @@
-import * as Board from "./Gameboard.js"
+
+const outputBox = document.querySelector(".statusBox")
 
 
-
-function addX(){
-
+export function updateOutput(player){
+    outputBox.textContent = `Current player's turn: ${player}`
 }
-function addO(){
 
-}

@@ -2,7 +2,33 @@ body,html,h1{
     padding: 0;
     margin: 0;
 }
-
+body{
+    position: relative;
+}
+.overhead{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: #0607086e;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.overhead > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 600px;
+    height: 600px;
+    background-color: #e6e1e1;
+}
+.username{
+    font-size: 2rem;
+    font-weight: 600;
+}
 .header{
     grid-column: 1/2;
     grid-row: 1/2;
@@ -90,4 +116,12 @@ body,html,h1{
 .game-board >:nth-child(9){
     border-bottom: 0;
     border-right: 0;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
